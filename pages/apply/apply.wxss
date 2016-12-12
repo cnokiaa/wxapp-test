@@ -1,0 +1,225 @@
+.sub-step {
+	margin-top: 0.4rem;
+	display: block;
+}
+/*导航部分*/
+.h2 {
+	color: #3c3c3c;
+	font-size: .8rem;
+	line-height: 1.8rem;
+	padding: 0 0.5rem;
+}
+input {
+	background: #fff;
+}
+.part-con {
+	padding-left: 0.42rem;
+	background-color: #fff;
+	border-bottom: 1px solid #edecef;
+	display: block;
+}
+.input-con {
+	display: block;
+	position: relative;
+	height: 2.5rem;
+	border-top:1px solid #edecef;
+	font-size: .75rem;
+	line-height: 2.5rem;
+}
+.input-con label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 6em;
+	color: #333;
+}
+input {
+	border: none;
+	background-color: #fff;
+	outline: none;
+	line-height: normal;
+}
+.input-con input,
+.cover-input,
+.bankusernme {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-left: 6em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cover-input,
+.bankusernme {
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #999;
+	font-size: 0.65rem;
+	line-height: 2rem;
+}
+.input-con .cover {
+	color: #000;
+}
+.bankusernme {
+	color: #666;
+}
+.arrow {
+	position: absolute;
+	right: 0.6rem;
+	top: 0.72rem;
+	width: 0.28rem;
+	height: 0.45rem;
+	background: url('../images/arrow.png') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.send,
+.settime {
+	position: absolute;
+	right: 0.5rem;
+	top: 0;
+	bottom: 0;
+	width: 4.35rem;
+	height: 1.5rem;
+	margin: auto 0;
+	font-size: .71rem;
+	font-weight: bold;
+	line-height: 1.5rem;
+	text-align: center;
+	-webkit-border-radius: 0.2rem;
+	-moz-border-radius: 0.2rem;
+	-ms-border-radius: 0.2rem;
+	-o-border-radius: 0.2rem;
+	border-radius: 0.2rem;
+	z-index:99;
+}
+.send {
+	background-color: #007aff;
+	color: #fff;
+}
+.settime {
+	background-color: #c4c4c4;
+	color: #fff;
+}
+.list {
+	display: block;
+	margin-bottom: 0.85rem;
+	border: 1px solid #edecef;
+	border-width: 1px 0;
+	background-color: #fff;
+}
+.list li {
+	display: block;
+	height: 2rem;
+	padding: 0 0.5rem;
+	border-bottom: 1px solid #edecef;
+	color: #3c3c3c;
+	font-size: 0.7rem;
+	line-height: 2rem;
+}
+.list li:after {
+	display: block;
+	height: 0;
+	content: '\200B';
+	clear: both;
+}
+.list li:last-child {
+	border: none;
+}
+.list li strong{
+	float: left;
+}
+.list li span {
+	float:right;
+	text-align:right;
+}
+.list li a {
+	position: relative;
+	display: block;
+	padding-right: 0.45rem;
+}
+.list li a:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '\200B';
+	width: 0.45rem;
+	height: 0.75rem;
+	margin: auto 0;
+	background: url('../images/arrow.png') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.red {
+	color: #f00;
+}
+/*下一步*/
+.next-step {
+	display: block;
+	width: 92.66%;
+	height: 1.82rem;
+	margin: 0 auto 0.35rem;
+	background-color: #45a4ff;
+	color: #fff;
+	font: normal 0.6rem/1.82rem 'Microsoft YaHei';
+	text-align: center;
+	-webkit-border-radius: 0.15rem;
+	-moz-border-radius: 0.15rem;
+	-ms-border-radius: 0.15rem;
+	-o-border-radius: 0.15rem;
+	border-radius: 0.15rem;
+}
+.disabled {
+	background-color: #b6b6ba;
+}
+
+.agreement {
+	display: block;
+	height: 0.72rem;
+	margin-bottom: 0.55rem;
+	padding: 0 0.95rem;
+	font-size: .7rem;
+	line-height: 0.65rem;
+}
+.agreement i {
+	float: left;
+	width: 0.7rem;
+	height: 0.7rem;
+	margin-right: 0.2rem;
+	background: url('../images/agree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.disagree i {
+	background: url('../images/disagree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.agreement span {
+	color: #3db3f9;
+}
+.tips {
+	padding: 0 1rem 0.42rem;
+}
+.tips text{
+	display: block;
+	font-size: .6rem;
+	line-height: .8rem;
+}

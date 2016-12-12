@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/trialCalculate",
+    "pages/upImages/uploadImages",
+    "pages/info/info",
+    "pages/bankCard/bankCard",
+    "pages/apply/apply",
+    "pages/success/success",
+    "pages/record/record",
+    "pages/orderDetail/orderDetail",
+    "pages/redPack/redPack"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "替你还",
+    "navigationBarTextStyle":"black"
+  }
+}

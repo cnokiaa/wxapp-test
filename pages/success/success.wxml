@@ -1,0 +1,20 @@
+<view class="pageview">	
+	<view class="success">
+		<view class="success-header clearfix">
+			<em></em>
+			<strong>提交成功！申请已受理</strong>
+		</view>
+		<view class="bar">
+			<view class="bar-line"></view>
+		</view>
+		<view class="success-tip clearfix">
+			<em></em>
+			<strong>预计一个工作日内完成审核</strong>
+			<p>申请结果可在申请记录中查询，或等候短信通知；期间请保持电话畅通，以便工作人员核实信息。</p>
+		</view>
+	</view>
+	<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.lakala.android&amp;g_f=991653" class="lkl-app">
+		<image src="../images/lkl_app.jpg" />
+	</a>
+	<a href="" class="complete">完成</a>
+</view>

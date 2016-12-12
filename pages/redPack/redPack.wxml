@@ -1,0 +1,25 @@
+<!-- <header>
+	<a href="" class="application-record"><i></i></a>
+	<p>我的红包</p>
+	<a href="" class="headerright">使用规则</a>
+</header> -->
+<view id="wrapper">
+	<view id="scroller" class="wrap">
+		<scroll-view scroll-y="true" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}">
+			<ul>	
+				<li>
+					<view class="pack">￥100</view>
+					<view class="det">
+						<text class="h3">易分期红包</text>
+						<strong>有效期至：2016-01-08</strong>
+						<p>可用于易分期业务手续费抵扣</p>
+					</view>
+					<a class="btn" bindtap="use">立即使用</a>
+				</li>
+			</ul>
+			<view class="loading-tip" hidden="{{loadTipType}}">
+				<strong>加载更多</strong>
+			</view>	
+		</scroll-view>
+	</view>
+</view>

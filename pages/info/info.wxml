@@ -1,0 +1,149 @@
+<view class="pageview">	
+	<view class="nav step2">
+		<view class="nav-step">
+			<view class="nav-inner">
+				<view class="progress"></view>
+				<ul>
+					<li class="active"><b>1</b></li>
+					<li class="ready"><b>2</b></li>
+					<li><b>3</b></li>
+					<li><b>4</b></li>
+				</ul>
+			</view>
+		</view>
+		<ul class="nav-tit clearfix">
+			<li>申请人照片</li>
+			<li class="active">个人资料</li>
+			<li>银行卡信息</li>
+			<li>提交申请</li>
+		</ul>
+	</view>
+		<!-- 表单部分 -->
+	<view class="sub-inf">
+		<text class="h2">请填写您的实名信息</text>
+		<view class="part-con">
+			<view class="input-con clearfix">
+				<label for="relname">真实姓名</label>
+				<input id="relname" type="text" placeholder="填写真实姓名" maxlength="16" value="{{info[10]}}" bindinput="changeT" data-index="10" />
+			</view>
+			<!-- 身份证号 -->
+			<view class="input-con">
+				<label for="idcard">身份证号</label>
+				<input id="idcard" type="idcard" placeholder="填写申请人的身份证号" maxlength="18" value="{{info[11]}}" bindinput="changeT" data-index="11" />
+			</view>
+		</view>
+		<text class="h2">请填写您的其他信息</text>
+		<view class="part-con">
+			<!-- 电子邮箱 -->
+			<view class="input-con">
+				<label for="mail">电子邮箱</label>
+				<input id="mail" type="text" placeholder="填写电子邮件" value="{{info[0]}}" maxlength="64" bindinput="changeT" data-index="0" />
+			</view>
+			<!-- 居住城市 -->
+			<view class="input-con" style="display:flex">
+				<label for="address">居住地址</label>
+				<view class="cover-input {{active[0]}}" bindtap="showScrollView" data-index="0">{{jz}}</view>
+				<!-- <input id="address" type="text" placeholder="选择您居住城市" value="{{jz}}" bindtap="showScrollView" data-index="0" disabled /> -->
+			</view>
+			<!-- 详细地址 -->
+			<view class="input-con">
+				<label for="detaddr">详细地址</label>
+				<input id="detaddr" name="address" type="text" placeholder="填写格式如XX街道xx号xx楼xx室" maxlength="64" bindinput="changeT" data-index="1" value="{{info[1]}}" />
+			</view>
+		</view>
+		<text class="h2">请填写您的工作单位信息</text>
+		<view class="part-con">
+			<!-- 单位全称 -->
+			<view class="input-con">
+				<label for="company">单位全称</label>
+				<input id="company" name="companyname" type="text" placeholder="填写就职公司在工商执照上的全称" maxlength="64" bindinput="changeT" data-index="2" value="{{info[2]}}"/>
+			</view>
+			<!-- 单位城市 -->
+			<view class="input-con">
+				<label for="companycity">单位城市</label>
+				<view class="cover-input {{active[0]}}" bindtap="showScrollView" data-index="1">{{dw}}</view>
+				<!-- <input id="companycity" type="text" placeholder="选择您单位城市" value="{{dw}}" bindtap="showScrollView" data-index="1" disabled/> -->
+			</view>
+			<!-- 单位地址 -->
+			<view class="input-con">
+				<label for="companyaddr">单位详址</label>
+				<input id="companyaddr" name="companyaddress" type="text" placeholder="填写格式如XX街道xx号xx楼xx室" maxlength="64" bindinput="changeT" data-index="3" value="{{info[3]}}"/>
+			</view>
+			<!-- 单位电话 -->
+			<view class="input-con companytel-con abs">
+				<label>单位电话</label>
+				<view class="companytel">
+					<view class="phone-area">
+						<input type="number" placeholder="区号" maxlength="4" bindinput="changeT" data-index="4" value="{{info[4]}}"/>
+					</view>
+					<view class="phone-main">
+						<input type="number" placeholder="固定电话" maxlength="8" bindinput="changeT" data-index="5" value="{{info[5]}}"/>
+					</view>
+					<view class="phone-ext">
+						<input type="number" placeholder="分机号" maxlength="6"/>
+					</view>
+				</view>
+				<view class="companytel-tips">
+					<image src="{{tipimg}}"/>
+				</view>
+			</view>
+		</view>
+		<text class="h2">请填写您的联系人信息</text>
+		<view class="part-con part-bottom">
+			<!-- 亲属关系 -->
+			<view class="input-con">
+				<label for="contactrelation">亲属关系</label>
+				<picker bindchange="bindPickerChange" value="{{index[2]}}" range="{{guanxi}}" data-index="2">
+				    <view class="picker">{{guanxi[index[2]]}}</view>
+				</picker>
+			</view>
+			<!-- 姓名 -->
+			<view class="input-con">
+				<label for="relationshipname">姓名&emsp;&emsp;</label>
+				<input id="relationshipname" type="text" placeholder="填写联系人姓名" maxlength="32" bindinput="changeT" data-index="6" value="{{info[6]}}"/>
+			</view>
+			<!-- 手机号 -->
+			<view class="input-con">
+				<label for="relationshiptel">手机号码</label>
+				<input id="relationshiptel" type="number" placeholder="填写联系人的手机号码" maxlength="11" bindinput="changeT" data-index="7" value="{{info[7]}}"/>
+			</view>
+		</view>
+		<view class="part-con">
+			<!-- 紧急联系人关系 -->
+			<view class="input-con">
+				<label for="emergencyrelation">紧急联系</label>
+				<picker bindchange="bindPickerChange" value="{{index[3]}}" range="{{guanxi}}" data-index="3">
+				    <view class="picker">{{guanxi[index[3]]}}</view>
+				</picker>
+			</view>
+			<!-- 紧急联系人姓名 -->
+			<view class="input-con">
+				<label for="contactsname">姓名&emsp;&emsp;</label>
+				<input id="contactsname" type="text" placeholder="填写联系人姓名" maxlength="16" bindinput="changeT" data-index="8" value="{{info[8]}}"/>
+			</view>
+			<!-- 紧急联系人电话 -->
+			<view class="input-con">
+				<label for="contactstel">手机号码</label>
+				<input id="contactstel" type="number" placeholder="填写联系人的手机号码" maxlength="11" bindinput="changeT" data-index="9" value="{{info[9]}}"/>
+			</view>
+		</view>
+		<text class="h2">推荐人信息</text>
+		<view class="part-con recommend">
+			<input type="number" name="usermobile" placeholder="填写推荐人号码" maxlength="11" bindinput="changeT" data-index="12" value="{{info[12]}}"/>
+		</view>
+		<span class="next-step" bindtap="submitTap">下一步</span>
+	</view>
+	<!-- 提示弹窗 -->
+	<view class="popup" hidden="{{popshowType}}">
+		<view class="popup-con">
+			<p>{{errmsgShow}}</p>
+			<div bindtap="closePop">确定</div>
+		</view>
+	</view>
+	<!--省市区-->
+	<view class="scrollmain" hidden="{{scrollType}}">
+		<scroll-view class="scrollview" scroll-y="true" scroll-top="{{scrollTop}}">
+		    <view class="sview" wx:for="{{selectName}}" bindtap="scrolltap" data-id="{{selectId[index]}}" data-name="{{selectName[index]}}">{{selectName[index]}}</view>
+	  	</scroll-view>
+  	</view>
+</view>

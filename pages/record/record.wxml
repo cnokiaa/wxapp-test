@@ -1,0 +1,39 @@
+<!-- <view class="loading">
+	<div></div>
+</view> -->
+<view class="wrap">
+	<nav class="clearfix">
+		<span class="{{dataIndex=='0'?'chosed':''}}" data-index="0" bindtap="tabTap">待还款</span>
+		<span class="{{dataIndex=='1'?'chosed':''}}" data-index="shzData" bindtap="tabTap">审核中</span>
+		<span class="{{dataIndex=='2'?'chosed':''}}" data-index="2" bindtap="tabTap">已结案</span>
+		<span class="{{dataIndex=='3'?'chosed':''}}" data-index="3" bindtap="tabTap">失败订单</span>
+	</nav>
+	<view class="loading-tip">
+		<strong>{{downMsg}}</strong>
+	</view>
+	<view id="wrapper">
+		<view id="scroller">
+			<scroll-view scroll-y="true">	
+				<ul>
+					<li wx:for="{{dataArray}}" class="recordC{{item.contractstatus}}" bindtap="litap" data-contractno="{{item.contractno}}" data-contractstatus="{{item.contractstatus}}">
+						<view class="list-left">
+							<strong>
+								<block wx:if="{{item.contractstatus == '1'}}">审核中</block>
+								<block wx:if="{{item.contractstatus == '2'}}">放款失败</block>
+								<block wx:if="{{item.contractstatus == '3'}}">待还款</block>
+								<block wx:if="{{item.contractstatus == '4'}}">已结案</block>
+								<block wx:if="{{item.contractstatus == '5'}}">已逾期</block>
+								<block wx:if="{{item.contractstatus == '6' || item.contractstatus == '9'}}">审核失败</block>
+							</strong>
+							<span>{{item.applytime}}</span>
+						</view>
+						<view class="list-right">
+							<em>{{item.busstyepName}}</em>
+							<b>{{item.applyamt}}</b>
+						</view>
+					</li>
+				</ul>
+			</scroll-view>
+		</view>
+	</view>
+</view>

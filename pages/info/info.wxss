@@ -1,0 +1,235 @@
+.vwS-false{touch-action: none;width:100%;height:100%;overflow-y:hidden;}
+/*导航部分*/
+.h2 {
+	color: #333;
+	font-size: 0.75rem;
+	line-height: 1.3rem;
+	padding: 0.2rem 0.75rem;
+	display: block;
+}
+input {
+	background: #fff;
+}
+.part-con {
+	overflow: hidden;
+	padding-left: 0.75rem;
+	background-color: #fff;
+	border-bottom: 1px solid #edecef;
+	display: block;
+}
+.input-con {
+	position: relative;
+	height: 2.5rem;
+	border-top:  1px solid #edecef;
+	margin-top: -1px;
+	font-size: 0.7rem;
+	line-height: 2.5rem;
+	display:block;
+}
+.abs{
+	height:3rem;
+	line-height: 3rem;
+}
+.input-con label:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1em;
+	height: 1rem;
+	content: "：";
+}
+.input-con label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5em;
+	color: #333;
+}
+input {
+	border: none;
+	background-color: #fff;
+	outline: none;
+	line-height: normal;
+}
+.input-con input,
+.cover-input,
+.bankusernme,picker{
+	display: block;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	padding-left: 5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cover-input {color:#888;}
+.cover-input.active{color:#333;}
+.bankusernme {
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #999;
+	font-size: 0.6rem;
+	line-height: 2rem;
+}
+.input-con .cover {
+	color: #000;
+}
+.bankusernme {
+	color: #666;
+}
+.arrow {
+	position: absolute;
+	right: 0.75rem;
+	top: 0.675rem;
+	width: 0.38rem;
+	height: 0.65rem;
+	background: url('../images/arrow.png') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+::-webkit-input-placeholder{
+	color: #999;
+}
+:-moz-placeholder {
+	color: #999;
+}
+::-o-placeholder {
+	color: #999;
+}
+:-ms-input-placeholder {
+	color: #999;
+}
+.companytel {
+	padding-left: 5em;
+	font-size: 0.7rem;
+	line-height: 2rem;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+}
+.companytel view {
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.companytel input {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	line-height: normal;
+}
+.companytel .phone-area,
+.companytel .phone-ext {
+	position: relative;
+	width: 25%;
+	height: 100%;
+}
+.companytel .phone-main {
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+.companytel .phone-area,
+.companytel .phone-main {
+	padding-right: 1em;
+}
+.companytel .phone-area:after,
+.companytel .phone-main:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1em;
+	height: 1rem;
+	line-height: 2.5rem;
+	content: "-";
+	text-align: center;
+	display:block;
+}
+.companytel-tips {
+	position: absolute;
+	left: 0;
+	bottom: 0.15rem;
+	height:11px;
+}
+.companytel-tips image {
+	display: block;
+	width:207px;
+	height:11px;
+}
+.recommend {
+	margin-bottom: 1.27rem;
+}
+.recommend input {
+	display: block;
+	width: 100%;
+	height: 2rem;
+	font-size: 0.6rem;
+}
+.part-bottom {
+	margin-bottom: 0.25rem;
+}
+/*下一步*/
+.next-step {
+	display: block;
+	width: 92.66%;
+	height: 2rem;
+	margin: 0 auto 0.35rem;
+	background-color: #3db3f9;
+	color: #fff;
+	font: normal 0.65rem/2rem 'Microsoft YaHei';
+	text-align: center;
+	-webkit-border-radius: 0.15rem;
+	-moz-border-radius: 0.15rem;
+	-ms-border-radius: 0.15rem;
+	-o-border-radius: 0.15rem;
+	border-radius: 0.15rem;
+}
+.disabled {
+	background-color: #b6b6ba;
+}
+
+.scrollmain{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.5);
+	z-index:999;
+}
+.scrollview{
+	position:fixed;
+	left:0;
+	bottom:0;
+	background-color: #abb2bc;
+	height:50%;
+	padding:2rem 0;
+}
+.sview{
+	text-align:center;
+	height: 2.17rem;
+	color: #fff;
+	font: normal 0.8rem/2.17rem "Microsoft YaHei";
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}

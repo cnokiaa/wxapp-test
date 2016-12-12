@@ -1,0 +1,114 @@
+<view class="pageview">	
+	<!-- <view class="loading">
+		<view></view>
+	</view> -->
+	<view class="nav step1" hidden="{{!wrongType}}">
+		<view class="nav-step">
+			<view class="nav-inner">
+				<view class="progress"></view>
+				<ul>
+					<li class="ready"><b>1</b></li>
+					<li><b>2</b></li>
+					<li><b>3</b></li>
+					<li><b>4</b></li>
+				</ul>
+			</view>
+		</view>
+		<ul class="nav-tit clearfix">
+			<li class="active">申请人照片</li>
+			<li>个人资料</li>
+			<li>银行卡信息</li>
+			<li>提交申请</li>
+		</ul>
+	</view>
+	<view class="main-con" hidden="{{!wrongType}}">
+		<view class="tips">
+			<p>请上传本人身份证照片，确保周围环境光线充足，拍照不要晃动，以便快速审批</p>
+		</view>
+		<view class="tipupload">
+			<p>请按图示要求上传您的身份证照片</p>
+			<strong bindtap="showWrong">错误示例</strong>
+		</view>
+		<view class="upload">
+			<view class="upload-con clearfix">
+				<view class="pic-part clearfix">
+					<view class="example-pic" bindtap="showBpic" data-index="0">
+						<image src="../images/facecard.jpg" alt="反面照" />
+					</view>
+					<view class="take-photo idcard-back-bg" bindtap="chooseImages" data-index="0">
+						<image src="{{photo[0]}}" alt="" hidden="{{photoType[0]}}"/>
+					</view>
+				</view>
+				<view class="pic-part clearfix">
+					<view class="example-pic" bindtap="showBpic" data-index="1">
+						<image src="../images/backcard.jpg" alt="正面国徽面照" />
+					</view>
+					<view class="take-photo idcard-bg" bindtap="chooseImages" data-index="1">
+						<image src="{{photo[1]}}" alt="" hidden="{{photoType[1]}}"/>
+					</view>
+				</view>
+				<view class="pic-part clearfix">
+					<view class="example-pic" bindtap="showBpic"  data-index="2">
+						<image src="../images/catchcard.jpg" alt="手持身份证照" />
+					</view>
+					<view class="take-photo" bindtap="chooseImages" data-index="2">
+						<p><text>点击拍摄</text><text>手持身份证照</text></p>
+						<image src="{{photo[2]}}" alt="" hidden="{{photoType[2]}}"/>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="sub" bindtap="submitTap">下一步</view>
+		
+	</view>
+	<!-- 提示弹窗 -->
+	<view class="popup" hidden="{{popshowType}}">
+		<view class="popup-con">
+			<p>{{errmsgShow}}</p>
+			<div bindtap="closePop">确定</div>
+		</view>
+	</view>
+	<!-- 照片放大 -->
+	<view class="show-pic" hidden="{{bPicType}}">
+		<view class="show-pic-con">
+			<!-- 关闭按钮 -->
+			<span class="close-pan" bindtap="closeBpic"></span>
+			<block wx:if="{{bPicNum == 0}}">
+				<text class='h3'>身份证头像照拍摄示例图</text>
+				<view class="big-img">
+					<image src="../images/bigcard_1.jpg" alt="放大图" />
+				</view>
+				<view class="big-img-tips">
+					<p>温馨提示：</p><p>1.拍摄时将身份证正面置于拍摄界面正中。</p>
+					<p>2.必须为本人身份证照片，真实有效，且内容清晰可辨。</p>
+				</view>
+			</block>
+			<block wx:if="{{bPicNum == 1}}">
+				<text class='h3'>身份证国徽照拍摄示例图</text>
+				<view class="big-img">
+					<image src="../images/bigcard_2.jpg" alt="放大图" />
+				</view>
+				<view class="big-img-tips">
+					<p>温馨提示：</p><p>1.拍摄时将身份证正面置于拍摄界面正中。</p><p>2.必须为本人身份证照片，真实有效，且内容清晰可辨。</p>
+				</view>
+			</block>
+			<block wx:if="{{bPicNum == 2}}">
+				<text class='h3'>申请人手持身份证合影拍摄示例图</text>
+				<view class="big-img">
+					<image src="../images/bigcard_3.jpg" alt="放大图" />
+				</view>
+				<view class="big-img-tips">
+					<p>温馨提示：</p><p>1.拍摄时保证环境光线充足，背景为纯色。</p><p>2.被拍摄者五官清晰，无遮拦。</p><p>3.身份证资料清晰可辨。</p>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 错误示例 -->
+	<view class="wrong-con" hidden="{{wrongType}}">
+		<view id="top-bar">
+			<view id="top-bar-btn" class="back-botton" bindtap="closeWrong"></view>
+			<view class="title ellipsis">错误示例</view>
+		</view>
+		<view class="wrong"></view>
+	</view>
+</view>

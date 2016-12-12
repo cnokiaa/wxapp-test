@@ -1,0 +1,427 @@
+.tips {
+	color: #3c3c3c;
+	font-size: 0.7rem;
+	line-height: 1.07rem;
+	padding: 0.35rem 1rem 0.2rem;
+	border-top:1px solid #e2e2e6;
+}
+.tips text {display: block;}
+.sub-inf .h2 span {
+	float: right;
+	color: #3cb3f9;
+	height: 100%;
+}
+.sub-inf .h2 {
+	display: block;
+	color: #3c3c3c;
+	padding-top: 0.3rem;
+	border-bottom: 1px dashed #5455ff;
+	font-size: .8rem;
+	line-height: 1.7rem;
+}
+.sub-inf .h2 span {
+	float: right;
+	height: 100%;
+	color: #3db3f9;
+	text-decoration: underline;
+}
+.part-con {
+	position: relative;
+	overflow: hidden;
+	width: 90.63%;
+	margin: 0 auto 0.75rem;
+	padding: 0 0.5rem;
+	background-color: #fff;
+	-webkit-border-radius: 0.2rem;
+	-moz-border-radius: 0.2rem;
+	-ms-border-radius: 0.2rem;
+	-o-border-radius: 0.2rem;
+	border-radius: 0.2rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+/*	-webkit-box-shadow: 0 0 1px 1px #d7d7db;
+	-moz-box-shadow: 0 0 1px 1px #d7d7db;
+	-ms-box-shadow: 0 0 1px 1px #d7d7db;
+	-o-box-shadow: 0 0 1px 1px #d7d7db;
+	box-shadow: 0 0 1px 1px #d7d7db;*/
+}
+.part-con .input-con:last-child {
+	border: none;
+}
+.bar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0.2rem;
+	background-color: #007aff;
+}
+.input-con {
+	position: relative;
+	height: 2rem;
+	border-bottom:  1px solid #edecef;
+	font-size: .7rem;
+	line-height: 2rem;
+}
+.input-con label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 4em;
+	color: #333;
+}
+input {
+	border: none;
+	background-color: #fff;
+	outline: none;
+	line-height: normal;
+}
+.input-con input,
+.cover-input,
+.bankusernme,
+picker {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-left: 4em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cover-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #3c3c3c;
+	font-size: .7rem;
+	line-height: 2rem;
+}
+.input-con .cover {
+	color: #000;
+}
+.bankusernme {
+	color: #000;
+}
+.arrow {
+	position: absolute;
+	right: 0.6rem;
+	top: 0.72rem;
+	width: 0.28rem;
+	height: 0.45rem;
+	background: url('../images/arrow.png') no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.subbank {
+	margin-bottom:1rem;
+}
+.agreement {
+	height: 0.75rem;
+	margin-bottom: 0.8rem;
+	padding: 0 0.5rem;
+	font-size: .6rem;
+	line-height: 0.75rem;
+}
+.agreement-list .agreement:last-child {
+	margin-bottom: 1.25rem;
+}
+.agreement i {
+	float: left;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin-right: 0.2rem;
+	background: url('../images/agree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.agreement a {
+	color: #007aff;
+}
+.disagree i {
+	background: url('../images/disagree.png') no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+/*下一步*/
+.next-step {
+	display: block;
+	width: 90.66%;
+	height: 1.82rem;
+	margin: 0 auto 0.35rem;
+	background-color: #007aff;
+	color: #fff;
+	font: normal 0.6rem/1.82rem 'Microsoft YaHei';
+	text-align: center;
+	-webkit-border-radius: 0.15rem;
+	-moz-border-radius: 0.15rem;
+	-ms-border-radius: 0.15rem;
+	-o-border-radius: 0.15rem;
+	border-radius: 0.15rem;
+}
+.disabled {
+	background-color: #b6b6ba;
+}
+/*弹窗提示*/
+.popup1 {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
+	z-index: 1000;
+}
+.popup1 .popup-con {
+	width:12rem;
+}
+.popup1 .popup-con .h3{
+	display:block;
+	color:#000;
+}
+.popup1 .popup-con .h3 i{
+	background:url(../images/warm.png) no-repeat;
+	width:0.875rem;
+	height:0.875rem;
+	display:inline-block;
+	vertical-align: sub;
+	margin-right:5px;
+}
+.popup1 .popup-con .h3 p{
+	padding-top:0;
+	text-align:left;
+}
+.popup-con h3 {
+	display: none;
+	font-size: 0.65rem;
+	font-weight: bold;
+	line-height: 2rem;
+	text-align: center;
+}
+.popup1 .popup-btn span,.popup1 .popup-btn em{
+	float: left;
+    width: 49%;
+    height: 100%;
+    color: #3c3c3c;
+    font: normal 0.8rem/2rem "Microsoft YaHei";
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.popup1 .popup-btn span{
+	border-right:1px solid #b2b2b2;
+}
+.popup1 .popup-btn em{
+	color:#03a7e4;
+}
+.popup b,
+.popup strong {
+	display: none;
+}
+.popup-type2 h3 {
+	display: block;
+}
+.popup-type2 p {
+	padding: 0 1rem 1rem;
+}
+.popup-type2 .popup-con div {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: box;
+}
+.popup-type2 b,
+.popup-type2 strong {
+	display: block;
+	width: 50%;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.popup-type2 b {
+	border-right: 1px solid #9c9f9f;
+	font-weight: normal;
+}
+.popup-type2 span {
+	display: none;
+}
+/*银行卡历史记录组件*/
+.banklist {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+.his-pan {
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	top: 27.16%;
+	width: 81.25%;
+	height: 8.5rem;
+	margin: 0 auto;
+	background-color: #e2e5e5;
+	-webkit-border-radius: 0.25rem;
+	-moz-border-radius: 0.25rem;
+	-ms-border-radius: 0.25rem;
+	-o-border-radius: 0.25rem;
+	border-radius: 0.25rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.his-pan h3 {
+	height: 2rem;
+	border-bottom: 1px solid #9c9f9f;
+	font: normal 0.75rem/2rem "Microsoft YaHei";
+	text-align: center;
+}
+/*iscroll组件银行卡历史记录查询*/
+#banlpan {
+	height: 4.5rem;
+}
+#banlpan {
+	overflow: hidden;
+}
+.banklist ul {
+	padding: 0 0.5rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.banklist li {
+	position: relative;
+	height: 1.5rem;
+	padding-right: 1.25rem;
+	border-bottom: 1px solid #9c9f9f;
+}
+.banklist li:last-child {
+	border: 0;
+}
+.banklist li p {
+	overflow: hidden;
+	width: 100%;
+	font: normal 0.6rem/1.5rem "Microsoft YaHei";
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.banklist li span {
+	position: absolute;
+	right: 0;
+	top: 0.38rem;
+	width: 0.75rem;
+	height: 0.75rem;
+	border: 1px solid #000;
+	background-color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+.banklist-btn {
+	height: 2rem;
+	border-top: 1px solid #9c9f9f;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.banklist-btn span,
+.banklist-btn em {
+	float: left;
+	width: 49%;
+	height: 100%;
+	color: #3c3c3c;
+	font: normal 0.8rem/2rem "Microsoft YaHei";
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.banklist-btn em {
+	color: #157efb;
+}
+.banklist-btn span {
+	border-right: 1px solid #9c9f9f;
+}
+.banklist .chosed span {
+	background: #fff url("../images/chosed.png") no-repeat center center;
+	-webkit-background-size: 60% 60%;
+	-moz-background-size: 60% 60%;
+	-ms-background-size: 60% 60%;
+	-o-background-size: 60% 60%;
+	background-size: 60% 60%;
+}
+/*组件样式*/
+.iscroll {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+#wrapper {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 8.68rem;
+	background-color: #abb2bc;
+}
+#scroller li:first-child {
+	border-top: 1px solid #ccc;
+}
+#scroller li {
+	height: 2.17rem;
+	color: #fff;
+	font: normal 0.8rem/2.17rem "Microsoft YaHei";
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#scroller .iscroll-chosed {
+	background-color: #007aff;
+}
+
+.agreement-list{
+	width: 90.63%;
+    margin: 0 auto;
+}

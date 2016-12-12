@@ -1,0 +1,210 @@
+.wrap {
+	padding: 0.6rem 0 4.13rem;
+}
+ul {
+	display: block;
+	width: 93.75%;
+	padding: 0 0.5rem;
+	margin: 0 auto 0.45rem;
+	background-color: #fff;
+	border: 1px solid #e3e3e8;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ul li:last-child {
+	border: 0;
+}
+ul li {
+	display: block;
+	height: 1.7rem;
+	border-bottom: 1px solid #e3e3e8;
+	color: #aeaeae;
+	font: normal .7rem/1.7rem "Microsoft YaHei";
+}
+ul li:after {
+	display: block;
+	content: "\200B";
+	height: 0;
+	clear: both;
+}
+ul li b {
+	float: left;
+	font-weight: normal;
+	text-align: left;
+}
+ul li strong {
+	float: right;
+	text-align: right;
+}
+/*主题部分*/
+.tit-part {
+	position: relative;
+	height: 2rem;
+}
+.tit-part span {
+	position: absolute;
+	left: -0.72rem;
+	top: 0.38rem;
+	width: 3.25rem;
+	height: 1.15rem;
+	color: #fff;
+	font: normal 0.7rem/1.15rem "Microsoft YaHei";
+	text-align: center;
+}
+.tit-part span:after {
+	position: absolute;
+	left: 0;
+	bottom: -0.12rem;
+	width: 0;
+	height: 0;
+	border-left: 0.13rem solid rgba(255, 255, 255, 0);
+	border-bottom: 0.05rem solid rgba(255, 255, 255, 0);
+	content: "\200B";
+}
+.tit-part {
+	border: 0;
+	border-bottom-width: 1px;
+	border-style: dashed;
+}
+.tit-part p {
+	float: right;
+	color: #3c3c3c;
+	font: normal 0.7rem/2rem "Microsoft YaHei";
+	text-align: right;
+}
+/*拉卡拉客服*/
+.lkltel {
+	display: block;
+	width: 93.75%;
+	height: 1.5rem;
+	margin: -0.45rem auto 0;
+	padding: 0.25rem 0.5rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.lkltel span {
+	display: block;
+	float: right;
+	color: #007aff;
+	font: normal 0.6rem/1rem "Microsoft YaHei";
+	text-align: right;
+	text-decoration: underline;
+}
+/*按钮部分*/
+.btn-part {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	display: none;
+	width: 100%;
+	padding-top: 1rem;
+	height: 3.13rem;
+	background-color: #efeff4;
+}
+.btn-part a {
+	display: block;
+	width: 93.75%;
+	height: 2rem;
+	margin: 0 auto;
+	color: #fff;
+	font: normal 0.7rem/2rem "Microsoft YaHei";
+	text-align: center;
+	background-color: #03a7e4;
+	-webkit-box-shadow: -1px 2px 1px 0 #69696b;
+	-moz-box-shadow: -1px 2px 1px 0 #69696b;
+	-ms-box-shadow: -1px 2px 1px 0 #69696b;
+	-o-box-shadow: -1px 2px 1px 0 #69696b;
+	box-shadow: -1px 2px 1px 0 #69696b;
+	-webkit-border-radius: 0.13rem;
+	-moz-border-radius: 0.13rem;
+	-ms-border-radius: 0.13rem;
+	-o-border-radius: 0.13rem;
+	border-radius: 0.13rem;
+}
+/*红色字体样式控制*/
+.red {
+	color: #fc2a2a;
+}
+.black {
+	color: #3c3c3c;
+}
+/*待还款颜色控制*/
+.wait-pay {
+	border-color: #fc952a;
+}
+.wait-pay span {
+	background-color: #fc952a;
+}
+.wait-pay span:after {
+	border-top: 0.12rem solid #da7e1f;
+	border-right: 0.13rem solid #da7e1f;
+}
+/*审核中*/
+.in-the-audit {
+	border-color: #55ff56;
+}
+.in-the-audit span {
+	background-color: #55ff56;
+}
+.in-the-audit span:after {
+	border-top: 0.12rem solid #1bc91c;
+	border-right: 0.13rem solid #1bc91c;
+}
+/*审核失败audit failure*/
+/*放款失败Loan failure*/
+/*已逾期Overdue*/
+.audit-failure,
+.loan-failure,
+.overdue {
+	border-color: #fc2a2a;
+}
+.audit-failure span,
+.loan-failure span,
+.overdue span {
+	background-color: #fc2a2a;
+}
+.audit-failure span:after,
+.loan-failure span:after,
+.overdue span:after {
+	border-top: 0.12rem solid #c71c1c;
+	border-right: 0.13rem solid #c71c1c;
+}
+/*已结案Case Closed*/
+.case-closed {
+	border-color: #007aff;
+}
+.case-closed span {
+	background-color: #007aff;
+}
+.case-closed span:after {
+	border-top: 0.12rem solid #005abb;
+	border-right: 0.13rem solid #005abb;
+}
+/*补充资料*/
+.sup-inf {
+	display: block;
+	width: 93.75%;
+	height: 1.75rem;
+	margin: 1.5rem auto;
+	background-color: #03a7e4;
+	color: #fff;
+	font-size: 0.7rem;
+	line-height: 1.75rem;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}

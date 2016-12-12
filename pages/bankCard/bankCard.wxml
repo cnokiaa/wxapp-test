@@ -1,0 +1,109 @@
+<view class="pageview">	
+	<view class="nav step3">
+		<view class="nav-step">
+			<view class="nav-inner">
+				<view class="progress"></view>
+				<ul>
+					<li class="active"><b>1</b></li>
+					<li class="active"><b>2</b></li>
+					<li class="ready"><b>3</b></li>
+					<li><b>4</b></li>
+				</ul>
+			</view>
+		</view>
+		<ul class="nav-tit clearfix">
+			<li>申请人照片</li>
+			<li>个人资料</li>
+			<li class="active">银行卡信息</li>
+			<li>提交申请</li>
+		</ul>
+	</view>
+	<view class="tips">
+		<view class="tip-tit">温馨提示：</view>
+		<text>1、通过审核后，资金将实时转入您填写的信用卡中；</text>
+		<text>2、到期还款日系统自动从您签约的储蓄卡中扣收。</text>
+	</view>
+	<view class="sub-inf subbank">
+		<view class="part-con">
+			<span class="bar"></span>
+			<text class="clearfix h2">信用卡信息</text>
+			<view class="input-con clearfix">
+				<label>姓名</label>
+				<view class="bankusernme">{{relname}}</view>
+			</view>
+			<!-- 银行 -->
+			<view class="input-con">
+				<label for="creditbank">银行</label>
+				<view class="arrow"></view>
+				<picker bindchange="bindPickerChange" value="{{index[0]}}" range="{{bank}}" data-index="0">
+				    <view class="picker">{{bank[index[0]]}}</view>
+				</picker>
+			</view>
+			<!-- 卡号 -->
+			<view class="input-con">
+				<label for="creditcardnum">卡号</label>
+				<input id="creditcardnum" name="creditcard" type="tel" placeholder="本人信用卡卡号" autocomplete="off" maxlength="20" bindinput="changeT" data-index="0" value="{{bankCard[0]}}" />
+			</view>
+		</view>
+
+		<view class="part-con">
+			<span class="bar"></span>
+			<text class="h2 clearfix">储蓄卡信息</text>
+			<view class="input-con clearfix">
+				<label>姓名</label>
+				<view class="bankusernme">{{relname}}</view>
+			</view>
+			<!-- 银行 -->
+			<view class="input-con">
+				<label for="debitbank">银行</label>
+				<view class="arrow"></view>
+				<picker bindchange="bindPickerChange" value="{{index[1]}}" range="{{bank}}" data-index="1">
+				    <view class="picker">{{bank[index[1]]}}</view>
+				</picker>
+			</view>
+			<!-- 卡号 -->
+			<view class="input-con">
+				<label for="bankcardnum">卡号</label>
+				<input id="bankcardnum" name="debitcard" type="tel" placeholder="本人储蓄卡卡号" autocomplete="off" maxlength="20" bindinput="changeT" data-index="1" value="{{bankCard[1]}}"/>
+			</view>
+		</view>
+	</view>
+	<view class="agreement-list clearfix">
+		<view class="agreement clearfix ellipsis"><i></i><a href="http://download.lakala.com.cn/lklmbl/html/lakala_zhengxing_chaxun.html">同意《个人征信查询及报送授权声明》</a></view>
+		<view class="agreement clearfix ellipsis"><i></i><a href="http://download.lakala.com.cn/lklmbl/html/kuaijie_huankuan_ygd_server.html">同意《拉卡拉信贷还款委托服务协议》</a></view>
+	</view>
+	<span class="next-step bank-next" bindtap="submitTap">下一步</span>
+	<!-- 提示弹窗 -->
+	<view class="popup" hidden="{{popshowType}}">
+		<view class="popup-con">
+			<p>{{errmsgShow}}</p>
+			<div bindtap="closePop">确定</div>
+		</view>
+	</view>
+	<!--超额提示-->
+	<!-- <view class="popup1">
+		<view class="popup-con">
+			<text class="h3"><i></i>超额提示</text>
+			<p>根据综合信用评分，您当前可用借款额度XX元，确认可快速办理。</p>
+			<view class="popup-btn">
+				<span>取消</span>
+				<em>确定</em>
+			</view>
+		</view>
+	</view>-->
+	<!-- 银行卡历史列表 -->
+	<!-- <view class="banklist">
+		<view class="his-pan">
+			<text class="h3">银行卡列表</text>
+			<view id="banlpan">
+				<view id="bank-his">
+					<ul></ul>
+				</view>
+			</view>
+			<view class="banklist-btn clearfix">
+				<span>取消</span>
+				<em>确定</em>
+			</view>
+		</view>
+	</view>  -->
+</view>

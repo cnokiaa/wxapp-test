@@ -1,0 +1,352 @@
+<view class="pageview">	
+	<view class="wrap">
+	<!-- 审核中 -->
+	<template name="tpl1">
+	<view>
+		<ul>
+			<li class="tit-part in-the-audit">
+				<span>审核中</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>
+ 				<block wx:if="{{freemoney > 0}}">
+					(红包已抵扣<span class='red'>{{freemoney}}元</span>)
+				</block>
+				</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}周</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{cvkcard}}</strong>
+			</li>
+		</ul>
+	</view>
+	</template>
+	<!-- 放款失败 -->
+	<template name="tpl2">
+		<ul>
+			<li class="tit-part loan-failure">
+				<span>放款失败</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>(红包已抵扣<span class='red'>{{freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}周</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{cvkcard}}</strong>
+			</li>
+		</ul>
+	</template>
+	<!-- 待还款 -->
+	<template name="tpl3">
+		<ul>
+			<li class="tit-part wait-pay">
+				<span>待还款</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>本期还款日</b>
+				<strong class='red'>{{currentDate}}</strong>
+			</li>
+			/*<li>
+				<b>本期期数</b>
+				<strong>{{currentperiod}}</strong>
+			</li>*/
+			{{? Number(currentPay) != 0}}
+			<li>
+				<b>本期已还款</b>
+				<strong class="red">{{currentPay}}元</strong>
+			</li>
+			{{?}}
+			<li>
+				<b>本期待还款</b>
+				<strong class="red">{{currentAmt}}元</strong>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>(红包已抵扣<span class='red'>{{freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}周</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{cvkcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{loantime}}</strong>
+			</li>
+			<li>
+				<b>已还金额</b>
+				<strong class="red">{{repcountamt}}元</strong>
+			</li>
+			<li>
+				<b>剩余待还金额</b>
+				<strong class="red">{{unsettled}}元</strong>
+			</li>
+		</ul>
+	</template>
+	<!-- 已结案 -->
+	<template name="tpl4">
+		<ul>
+			<li class="tit-part case-closed">
+				<span>已结案</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>(红包已抵扣<span class='red'>{{freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}月</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{=cvkcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{loantime}}</strong>
+			</li>
+			<li>
+				<b>结案日期</b>
+				<strong>{{endtime}}</strong>
+			</li>
+			<li>
+				<b>实际还款总额</b>
+				<strong class="red">{{repcountamt}}元</strong>
+			</li>
+		</ul>
+	</template>
+	<!-- 已逾期 -->
+	<template name="tpl5">
+		<ul>
+			<li class="tit-part overdue">
+				<span>已逾期</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>逾期日期</b>
+				<strong class="red">{{yqDate}}</strong>
+			</li>
+			<li>
+				<b>逾期未还款</b>
+				<strong class="red">{{yqMoney}}元</strong>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期</b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>借款金额</b>
+				<strong>{{loan}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>(红包已抵扣<span class='red'>{{freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}月</strong>
+			</li>
+			<!--creditcard-->
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{cvkcard}}</strong>
+			</li>
+			<li>
+				<b>放款日期</b>
+				<strong>{{loantime}}</strong>
+			</li>
+			<li>
+				<b>已还金额</b>
+				<strong class="red">{{repcountamt}}元</strong>
+			</li>
+			<li>
+				<b>剩余待还金额</b>
+				<strong class="red">{{unsettled}}元</strong>
+			</li>
+		</ul>
+	</template>
+	<!-- 审核失败 -->
+	<template name="tpl6">
+		<ul>
+			<li class="tit-part audit-failure">
+				<span>审核失败</span>
+				<p>合同号：{{contractno}}</p>
+			</li>
+			<li>
+				<b>业务名称</b>
+				<strong>{{businesstype}}</strong>
+			</li>
+			<li>
+				<b>申请日期 </b>
+				<strong>{{applydate}}</strong>
+			</li>
+			<li>
+				<b>申请金额</b>
+				<strong>{{applyamt}}元</strong>
+			</li>
+			<li>
+				<b>一次性服务费</b>
+				<strong><span class='red'>{{onemoney}}元</span>(红包已抵扣<span class='red'>{{freemoney}}元</span>)</strong>
+			</li>
+			<li>
+				<b>到账金额</b>
+				<strong>{{account}}元</strong>
+			</li>
+			<li>
+				<b>申请周期</b>
+				<strong>{{period}}月</strong>
+			</li>
+			<li>
+				<b>放款信用卡</b>
+				<strong>{{xykcard}}</strong>
+			</li>
+			<li>
+				<b>还款储蓄卡</b>
+				<strong>{{cvkcard}}</strong>
+			</li>
+			<block wx:if="{{bujianType == 1}}">
+				<li>
+					<b>失败原因</b>
+					<strong class="red">银行卡待补件</strong>
+				</li>
+			</block>
+			<block wx:if="{{bujianType == 2}}">
+				<li>
+					<b>失败原因</b>
+					<strong class="red">图片待补件</strong>
+				</li>
+			</block>
+		</ul>
+		<!-- 客服电话 -->
+		<block wx:if="{{bujianType == 1}}">
+			<button class="sup-inf" form-type="submit">补充资料</button>
+		</block>
+		<block wx:if="{{bujianType == 2}}">
+			<button class="sup-inf" form-type="submit">补充资料</button>
+		</block>
+	</template>
+
+	<template is="tpl{{contractstatus}}" data="{{...it}}" />
+	<view class="lkltel clearfix">
+		<span bindtap="call">拉卡拉客服：95016</span>
+	</view>
+	</view>
+	<view class="btn-part">
+		<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.lakala.android&amp;g_f=991653" class="btn">立即登录客户端还款</a>
+	</view>	
+</view>

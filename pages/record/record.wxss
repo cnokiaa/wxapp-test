@@ -1,0 +1,260 @@
+/*加载*/
+.loading {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+}
+.loading div {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 2rem;
+	height: 2rem;
+	margin: auto;
+	background: url("../images/loading51.gif") no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 2rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+	/*position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width:100%;*/
+}
+nav {
+	position: fixed;
+	left: 0;
+	/*top: 2.2rem;*/
+	top: 0;
+	width: 100%;
+	height: 2rem;
+	background-color: #fff;
+	/*margin-bottom: 0.47rem;*/
+	border-bottom: 1px solid #dbdbe2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index:99;
+}
+nav span {
+	float: left;
+	width: 25%;
+	height: 100%;
+	color: #3c3c3c;
+	font: normal 0.75rem/2rem "Microsoft YaHei";
+	text-align: center;
+}
+.chosed {
+	position: relative;
+	color: #007aff;
+}
+.chosed:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 1px;
+	margin: 0 auto;
+	content: "\200B";
+	background-color: #007aff;
+}
+#wrapper {
+	/*position: absolute;
+	left: 0;
+	top: 2rem;*/
+	overflow: hidden;
+	height: 100%;
+	width:100%;
+/*	margin-top:1rem;
+	position: relative;
+	width: 100%;
+	height: 100%;*/
+}
+scroll-view {
+	height:100%;
+}
+#scroller {
+	position: relative;
+	width: 100%;
+	height: 101%;
+}
+#scroller ul {
+	display: block;
+	padding-top: 0.45rem;
+	min-height: 100%;
+}
+#wrapper li {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 3.2rem;
+	padding: 0 0.5rem;
+	margin-bottom: 0.5rem;
+	background-color: #fff;
+	font: normal 0.75rem/2.75rem "Microsoft YaHei";
+	text-align: center;
+	box-shadow: 0 1px 0 #e2e2e6,0 -1px 0 #e2e2e6;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*下拉刷新文字样式*/
+.loading-tip {
+	margin-top:-1.5rem;
+	width: 100%;
+	height: 1.5rem;
+	text-align: center;
+}
+.loading-tip strong {
+	position: relative;
+	color: #aeaeae;
+	font: normal 0.5rem/1.8rem "Microsoft YaHei";
+}
+.loading-tip strong:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -0.6rem;
+	content: "\200B";
+	width: 100%;
+	height: 0.5rem;
+	margin: 0 auto;
+	background: url("../images/loading51.gif") no-repeat center center;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-ms-background-size: auto 100%;
+	-o-background-size: auto 100%;
+	background-size: auto 100%;
+}
+/*左边样式*/
+.list-left {
+	float: left;
+	height: 100%;
+}
+.list-left strong {
+	display: block;
+	padding-top: 0.42rem;
+	height: 1.05rem;
+	font: normal 0.7rem/1.05rem "Microsoft YaHei";
+	text-align: left;
+}
+.list-left span {
+	display: block;
+	height: .82rem;
+	color: #aeaeae;
+	font: normal .6rem/.82rem "Microsoft YaHei";
+	text-align: left;
+}
+.list-left b {
+	display: block;
+	height: 0.6rem;
+	color: #fe0000;
+	font: normal 0.5rem/0.6rem "Microsoft YaHei";
+	text-align: left;
+}
+/*右边样式*/
+.list-right {
+	display: block;
+	float: right;
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+}
+.list-right em,
+.list-right b,
+.list-right div {
+	display: block;
+	color: #3c3c3c;
+	height: 0.75rem;
+	font-size: .6rem;
+	font-weight: normal;
+	line-height: 0.75rem;
+	text-align: right;
+}
+.list-right div:after {
+	display: block;
+	height: 0;
+	content: '\200B';
+	clear: both;
+}
+.list-right i {
+	float: right;
+	height: 100%;
+	border: 1px solid #169aff;
+	padding: 0 0.2rem;
+	line-height: 0.7rem;
+	font-style: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+/*等待还款字体颜色*/
+.recordC3 strong {
+	color: #fc952a;
+}
+/*逾期样式*/
+.be-overdue strong,.recordC5 strong {
+	color: #f14444;
+}
+/*失败样式*/
+.recordC2 strong,
+.audit-failure strong,.recordC6 strong {
+	color: #fc2a2a;
+}
+/*已结案样式*/
+.recordC4 strong {
+	color: #007aff;
+}
+/*审核中字体样式*/
+.recordC1 strong {
+	color: #55ff56;
+}
+/*审核失败待补件*/
+.wait-add strong,.recordC9 strong{
+	color: #fc2a2a;
+}
+.wait-add .list-left strong,.recordC9 .list-left strong {
+	padding-top: 0.17rem;
+	height: 0.9rem;
+	font: normal 0.65rem/0.9rem 'Microsoft YaHei';
+}
+.wait-add .list-left span,.recordC9 .list-left span {
+	height: 0.68rem;
+	font: normal 0.5rem/0.68rem 'Microsoft YaHei';
+}
+.wait-add .list-left b,.recordC9 .list-left b {
+	height: 0.9rem;
+	font: normal 0.5rem/0.9rem 'Microsoft YaHei';
+}

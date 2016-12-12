@@ -1,0 +1,92 @@
+<view class="pageview">	
+	<view class="nav step4">
+		<view class="nav-step">
+			<view class="nav-inner">
+				<view class="progress"></view>
+				<ul>
+					<li class="active"><b>1</b></li>
+					<li class="active"><b>2</b></li>
+					<li class="active"><b>3</b></li>
+					<li class="ready"><b>4</b></li>
+				</ul>
+			</view>
+		</view>
+		<ul class="nav-tit clearfix">
+			<li>申请人照片</li>
+			<li>个人资料</li>
+			<li>银行卡信息</li>
+			<li class="active">提交申请</li>
+		</ul>
+	</view>
+	<div class="sub-inf sub-step">
+		<div class="part-con sub-step1">
+			<!-- 手机号 -->
+			<div class="input-con clearfix">
+				<label for="userMobile">手机号</label>
+				<input type="tel" id="userMobile" class="user-tel" placeholder="请输入手机号" autocomplete="off" maxlength="11" value="{{userMobile}}" bindinput="changeT" data-index="0" />
+			</div>
+			<!-- 验证码 -->
+			<div class="input-con clearfix">
+				<label for="verification">验证码</label>
+				<input id="verification" type="tel" placeholder="请输入短信验证码" autocomplete="off" maxlength="6" bindinput="changeT"  data-index="1"/>
+				<view class="send" bindtap="sendMsg" hidden="{{msgType}}">点击发送</view>
+				<view class="settime" hidden="{{!msgType}}">{{time}}s后重发</view>
+			</div>
+		</div>
+		<text class="h2">请确认您的申请信息</text>
+		<ul class="list">
+			<li>
+				<strong>申请人</strong>
+				<span>{{relname}}</span>
+			</li>
+			<li>
+				<strong>申请金额</strong>
+				<span>1000元</span>
+			</li>
+
+			<li>
+				<strong>申请期数</strong>
+				<span>1周</span>
+			</li>
+			<li>
+				<strong>到账金额</strong>
+				<span>1000元</span>
+			</li>
+
+			<li>
+				<strong>一次性服务费</strong>
+				<span><em class="red">60.00元</em>(红包已抵扣<em class="red">10.00元</em>)</span>
+			</li>
+			
+			<li>
+				<strong>信用卡号</strong>
+				<span class="creditcard">{{bankCard[0]}}</span>
+			</li>
+			<li>
+				<strong>还款日</strong>
+				<span>2015年08月08日(一次性还款)</span>
+			</li>
+			<li>
+				<strong>储蓄卡号</strong>
+				<span class="bankcard">{{bankCard[1]}}</span>
+			</li>
+			<li>
+				<strong>总还款金额</strong>
+				<span class="red">1600.00元</span>
+			</li>
+		</ul>	
+	</div>
+	<div class="agreement clearfix ellipsis"><i></i>同意《拉卡拉“替你还”服务协议》</div>
+	<view class="tips">
+		<text>温馨提示：</text>
+		<text>请您在到期还款日前存入足够资金，以免扣收不成功产生滞纳金及利息，影响您的信用记录。</text>
+	</view>
+	<span class="next-step" bindtap="submitTap">提交申请</span>
+	<!-- 提示弹窗 -->
+	<view class="popup" hidden="{{popshowType}}">
+		<div class="popup-con">
+			<p>{{errmsgShow}}</p>
+			<div bindtap="closePop">确定</div>
+		</div>
+	</view>
+</view>

@@ -1,0 +1,60 @@
+	<header>
+		<p>替你还</p>
+		<a class="application-record" bindtap="goRecord">
+			<b></b>
+			<span>申请记录</span>
+		</a>
+		<div class="connect" data-show="{{conType}}" bindtap="showcon">
+			<strong></strong>
+			<view class="connect-con" hidden="{{conType}}">
+				<a bindtap="yewu">业务说明</a>	
+			</view>
+		</div>
+	</header>
+	<div class="main-con">
+		<p class="quota-tip clrarfix">您当前可用借款额度10000.00元</p>
+		<text class="apply-tip">申请金额</text>
+		<div class="input-apply">
+			<label for="">金额：</label>
+			<input type="number" placeholder="最低{{limitMin}}元,最高{{limitMax}}元"  bindblur="changeT" bindfocus="inputFocus" value="{{applyment}}"/>
+			<span class="clearfix"><b></b>￥</span>
+		</div>
+		<p class="tips">温馨提示：实际到账金额以审批结果为准</p>
+		<!-- 申请周期部分 -->
+		<div class="apply-cycle">
+			<text class="h2">申请周期</text>
+			<div class="cycle-part">
+				<view class="cycle-part-con clearfix">
+					<span class="{{curIndex == index ? 'selected' : ''}}" wx:for="{{zhouqi}}" bindtap="chooseZq" data-no="{{index}}">{{item.periods}}{{item.lenunit}}</span>
+				</view>
+			</div>
+			<view hidden="{{detType}}">
+			<ul class="replay-det">
+				<li>
+					<span>到账金额：</span>
+					<strong class="red">{{zqData.accountMoney}}元</strong>
+				</li>
+				<li>
+					<span>一次性服务费：</span>
+					<strong><em>{{zqData.oneOffPayment}}元(</em>已抵扣<em>{{zqData.hongbao}}元</em>)</strong>
+				</li>
+				<li>
+					<span>您需在{{zqData.time}}一次性还款<em class="red">{{zqData.totalMoney}}元</em></span>
+				</li>
+			</ul>
+			</view>
+			<view class="usemoney">
+				<span>红包</span>
+				<strong><a bindtap="redpack">替你还红包<em class="red">{{zqData.hongbao}}元</em></a></strong>
+			</view>
+			<!-- 还款明细 -->
+		</div>
+	</div>
+	<view class="next-step {{disabled == true ? 'disabled' : ''}}" bindtap="submitBt">立即申请</view>
+	<!-- 提示弹窗 -->
+	<view class="popup" hidden="{{popshowType}}">
+		<div class="popup-con">
+			<p>{{errmsgShow}}</p>
+			<div bindtap="closePop">确定</div>
+		</div>
+	</view>
